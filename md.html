@@ -160,7 +160,6 @@ body {
   width: 100%; /* fit container */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* subtle glow */
 }
 
 /* Prevent links in code-resources section from changing color or showing underline */
@@ -222,12 +221,6 @@ body.light-mode .project-section i {
   color: rgba(0,0,0,0.8) !important;
 }
 
-/* Video / Image shadows */
-body.light-mode .design-media video,
-body.light-mode .project-splash video {
-  box-shadow: 0 0 20px rgba(0,0,0,1) !important;
-}
-
 /* Footer Text */
 body.light-mode footer,
 body.light-mode footer a,
@@ -239,19 +232,6 @@ body.light-mode footer strong {
 body.light-mode .project-section a {
   color: #111 !important;
   text-decoration: underline !important;
-}
-/* GLOBAL fallback — only applies if shadow is NOT already set */
-img:not([style*="box-shadow"]),
-video:not([style*="box-shadow"]) {
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-/* Light mode fallback */
-body.light-mode img:not([style*="box-shadow"]),
-body.light-mode video:not([style*="box-shadow"]) {
-  box-shadow: 0 0 20px rgba(0,0,0,1);
 }
 
 /* ================================
@@ -812,7 +792,7 @@ body.light-mode video:not([style*="box-shadow"]) {
       <!-- Video Column -->
       <div class="project-splash" style="flex-basis:45%; min-width:300px; margin-top: 20px; ">
         <video autoplay loop muted playsinline
-               style="width:100%; height:auto; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+               style="width:100%; height:auto; border-radius:12px; object-fit:contain;">
           <source src="assets/md-splashscreen.mp4" type="video/mp4">
         </video>
       </div>
@@ -854,7 +834,7 @@ body.light-mode video:not([style*="box-shadow"]) {
       <!-- Image Column -->
       <div class="project-splash" style="flex-basis:45%; min-width:300px; margin-top:60px; margin-bottom:40px; display:flex; align-items:center; justify-content:center;">
         <img src="images/mudrs-symbols.jpg" alt="Bharatanatyam Mudras"
-             style="width:100%; height:auto; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+             style="width:100%; height:auto; border-radius:12px; object-fit:contain;">
       </div>
     </div>
 
@@ -878,11 +858,33 @@ body.light-mode video:not([style*="box-shadow"]) {
   </ul>
 </div>
 
+<!-- Process -->
+<div class="project-section" id="process">
+  <h2><i class="fas fa-cogs"></i> Process</h2>
+  <p>We began by capturing images of five Bharatanatyam mudras — Arala, Kapita, Kartari, Kataka Mukha, and Mayura — performed by multiple people. These images were organised into separate folders and uploaded to Google Drive.</p>
+
+  <p>Using Python, we generated <code>path2.csv</code> containing the name and path of each image. This CSV, along with the images, was used to extract 21 hand keypoints through the ml5.js handpose model, resulting in a new dataset file: <code>hand_keypoints.csv</code>.</p>
+
+  <p>We trained a Multi-Layer Perceptron (MLP) model using this dataset, producing three output files essential for prediction:</p>
+  <ul>
+    <li><code>model.json</code></li>
+    <li><code>model_meta.json</code></li>
+    <li><code>model.weights.bin</code></li>
+  </ul>
+
+  <p>Through this process, we understood the core difference between the two major approaches: <code>ml5.neuralNetwork()</code> for MLPs and <code>ml5.featureExtractor()</code> for CNN-based models.</p>
+
+  <p>We sourced Carnatic varnam audio clips from YouTube and integrated them into p5.js for real-time mudra detection using the webcam. Each mudra was mapped to its corresponding audio, creating an interactive cultural experience.</p>
+
+  <p>Throughout development, we tested with smaller image sets and simplified CSVs to validate each step before scaling up. Despite this incremental approach, the final dataset introduced challenges that required iterative debugging and refinement.</p>
+</div>
+
+
 <!-- Gesture Recognition -->
 <div class="project-section" id="gesture-recognition">
   <h2><i class="fas fa-hand"></i> Gesture Recognition</h2>
   <div class="design-demo">
-    <video controls width="100%" style="margin-bottom:20px; border-radius:12px; box-shadow: 0 0 30px rgba(255,255,255,0.2);">
+    <video controls width="100%" style="margin-bottom:20px; border-radius:12px;">
       <source src="assets/mudra-demo.mp4" type="video/mp4">
     </video>
   </div>
@@ -908,14 +910,14 @@ body.light-mode video:not([style*="box-shadow"]) {
     <li>Handpose model detected 43 points instead of 42. Removed extra “which hand” point by telling the python file to ignore that column in the excel sheet to fix NaN errors in graphs.</li>
 <li style="margin-bottom:30px; list-style: none; display: flex; gap: 4%;">
   <img src="images/mudra-nan_error.jpg" alt="Handpose model with extra point causing NaN errors" 
-       style="width:48%; height:auto; border-radius:8px; box-shadow:0 0 20px rgba(255,255,255,0.2);">
+       style="width:48%; height:auto; border-radius:8px;">
   <img src="images/mudra-without_nan_error.jpg" alt="Handpose model after removing extra point" 
-       style="width:48%; height:auto; border-radius:8px; box-shadow:0 0 20px rgba(255,255,255,0.2);">
+       style="width:48%; height:auto; border-radius:8px;">
 </li>
 
 <li>Browsers block direct local file access. Used <code>python -m http.server 8000</code> to serve <code>model.json</code> and audio for proper testing.</li>
 <li style="margin-bottom:30px; list-style: none;">
-  <img src="images/mudra-modeljson.jpg" alt="Local server setup" style="width:100%; height:auto; border-radius:8px; box-shadow:0 0 20px rgba(255,255,255,0.2);">
+  <img src="images/mudra-modeljson.jpg" alt="Local server setup" style="width:100%; height:auto; border-radius:8px;">
 </li>
 
     <li>CNN training failed due to limited data; switched to Multi-Layer Perceptron (MLP).</li>

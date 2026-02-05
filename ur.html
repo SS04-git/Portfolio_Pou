@@ -160,7 +160,6 @@ body {
   width: 100%; /* fit container */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* subtle glow */
 }
 
 .project-meta a {
@@ -179,7 +178,6 @@ body {
   width: auto;
   cursor: pointer;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 
@@ -253,12 +251,6 @@ body.light-mode .project-section i {
   color: rgba(0,0,0,0.8) !important;
 }
 
-/* Video / Image shadows */
-body.light-mode .design-media video,
-body.light-mode .project-splash video {
-  box-shadow: 0 0 20px rgba(0,0,0,1) !important;
-}
-
 /* Footer Text */
 body.light-mode footer,
 body.light-mode footer a,
@@ -277,14 +269,8 @@ img:not([style*="box-shadow"]),
 video:not([style*="box-shadow"]) {
   border-radius: 8px;
   object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* Light mode fallback */
-body.light-mode img:not([style*="box-shadow"]),
-body.light-mode video:not([style*="box-shadow"]) {
-  box-shadow: 0 0 20px rgba(0,0,0,1);
-}
 /* ================================
    RESPONSIVE FIXES FOR URUSHYA PAGE
    Replace the existing media queries with these
@@ -1175,7 +1161,7 @@ body.light-mode video:not([style*="box-shadow"]) {
   </div>
 
   <div class="design-media">
-    <div class="carousel" style="position:relative; width:100%; max-width:800px; height:500px; overflow:hidden; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0.1); margin:0 auto;">
+    <div class="carousel" style="position:relative; width:100%; max-width:800px; height:500px; overflow:hidden; border-radius:12px; margin:0 auto;">
       
       <div class="carousel-inner" style="display:flex; transition:transform 0.5s ease; height:100%; width:100%;">
         <img src="images/survey-chart-confidence.png" alt="Chart 1" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
@@ -1191,7 +1177,7 @@ body.light-mode video:not([style*="box-shadow"]) {
   </div>
 </div>
 
-<!-- SECONDARY RESEARCH – COMPACT INSIGHTS LIST -->
+<!-- SECONDARY RESEARCH – COMPACT INSIGHTS LIST
 <div class="project-section" id="secondary-research">
   <h2><i class="fas fa-lightbulb"></i> Secondary Research Insights</h2>
   <ul style="font-size: 16px; line-height: 1.7; margin: 20px 0;">
@@ -1202,6 +1188,21 @@ body.light-mode video:not([style*="box-shadow"]) {
     <li><strong>75% want financial education</strong>, but <strong>75% lack confidence</strong> to act</li>
     <li><strong>70% want AI financial help</strong> — but <strong>60% fear data privacy</strong> in apps</li>
   </ul>
+</div>
+
+<!-- Final Answer
+<div class="project-section" style="text-align: center; margin-top: 32px;">
+  <p style="font-size: 24px; color: #00D2FF;">
+    <strong>Takeaway:</strong> India’s youth are <strong>curious but paralyzed</strong> — they need <strong>safe, simple, mentor-backed tools</strong> to act.
+  </p>
+</div> -->
+
+<!-- SECONDARY RESEARCH – COMPACT INSIGHTS LIST -->
+<div class="project-section" id="secondary-research">
+  <h2><i class="fas fa-lightbulb"></i> Secondary Research Insights</h2>
+  <img 
+    src="images/ur_secr.png" 
+    alt="Icon-based visualization of financial literacy and behavioural insights">
 </div>
 
 <!-- Final Answer -->
@@ -1298,7 +1299,7 @@ body.light-mode video:not([style*="box-shadow"]) {
 
   <!-- Persona 2: Aarav Menon -->
   <div style="text-align: center;">
-    <img src="images/persona-aarav-menon.png" 
+    <img src="images/persona-justin-menon.png" 
          alt="Aarav Menon – 21, Engineering Student, Wants to invest but finds finance complex" 
          class="click-expand-img" 
          style="border-radius: 16px; max-width: 600px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
@@ -1388,29 +1389,29 @@ body.light-mode video:not([style*="box-shadow"]) {
   </div>
 
   <div class="design-media">
-    <div class="carousel" style="position:relative; width:100%; max-width:450px; height:600px; overflow:hidden; border-radius:16px; box-shadow:0 0 30px rgba(255,255,255,0.12); background:#0f0f1a; margin:0 auto;">
+    <div class="carousel" style="position:relative; width:100%; max-width:450px; height:600px; overflow:hidden; border-radius:16px; margin:0 auto;">
       
       <div class="carousel-inner" style="display:flex; transition:transform 0.5s ease; height:100%; width:100%;">
-        <img src="images/1.png"  alt="Paper Prototype 1"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/2.png"  alt="Paper Prototype 2"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/3.png"  alt="Paper Prototype 3"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/4.png"  alt="Paper Prototype 4"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/5.png"  alt="Paper Prototype 5"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/6.png"  alt="Paper Prototype 6"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/7.png"  alt="Paper Prototype 7"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/8.png"  alt="Paper Prototype 8"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/9.png"  alt="Paper Prototype 9"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/10.png" alt="Paper Prototype 10" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/11.png" alt="Paper Prototype 11" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/12.png" alt="Paper Prototype 12" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/13.png" alt="Paper Prototype 13" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/14.png" alt="Paper Prototype 14" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/15.png" alt="Paper Prototype 15" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/16.png" alt="Paper Prototype 16" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/17.png" alt="Paper Prototype 17" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/18.png" alt="Paper Prototype 18" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/19.png" alt="Paper Prototype 19" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
-        <img src="images/20.png" alt="Paper Prototype 20" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain; background:#111;">
+        <img src="images/1.png"  alt="Paper Prototype 1"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/2.png"  alt="Paper Prototype 2"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/3.png"  alt="Paper Prototype 3"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/4.png"  alt="Paper Prototype 4"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/5.png"  alt="Paper Prototype 5"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/6.png"  alt="Paper Prototype 6"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/7.png"  alt="Paper Prototype 7"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/8.png"  alt="Paper Prototype 8"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/9.png"  alt="Paper Prototype 9"  style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/10.png" alt="Paper Prototype 10" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/11.png" alt="Paper Prototype 11" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/12.png" alt="Paper Prototype 12" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/13.png" alt="Paper Prototype 13" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/14.png" alt="Paper Prototype 14" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/15.png" alt="Paper Prototype 15" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/16.png" alt="Paper Prototype 16" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/17.png" alt="Paper Prototype 17" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/18.png" alt="Paper Prototype 18" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/19.png" alt="Paper Prototype 19" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
+        <img src="images/20.png" alt="Paper Prototype 20" style="min-width:100%; height:100%; flex-shrink:0; object-fit:contain;">
       </div>
 
       <button class="prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:rgba(0,0,0,0.7); border:none; font-size:2rem; color:white; cursor:pointer; z-index:10; padding:10px 15px; border-radius:5px;">&#10094;</button>
@@ -1438,7 +1439,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-onboarding.mp4" type="video/mp4">
       </video>
     </div>
@@ -1456,7 +1457,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-login.mp4" type="video/mp4">
       </video>
     </div>
@@ -1474,7 +1475,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-pretest.mp4" type="video/mp4">
       </video>
     </div>
@@ -1492,7 +1493,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-home.mp4" type="video/mp4">
       </video>
     </div>
@@ -1510,7 +1511,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-learn.mp4" type="video/mp4">
       </video>
     </div>
@@ -1528,7 +1529,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-apply.mp4" type="video/mp4">
       </video>
     </div>
@@ -1545,7 +1546,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-connect.mp4" type="video/mp4">
       </video>
     </div>
@@ -1563,7 +1564,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-cashcompass.mp4" type="video/mp4">
       </video>
     </div>
@@ -1581,7 +1582,7 @@ body.light-mode video:not([style*="box-shadow"]) {
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+        style="width:auto; max-width:300px; max-height:480px; margin-left:150px; border-radius:30px; object-fit:contain;">
         <source src="assets/prism-profile.mp4" type="video/mp4">
       </video>
     </div>
@@ -1591,7 +1592,7 @@ body.light-mode video:not([style*="box-shadow"]) {
   <div class="project-section">
     <h2><i class="fas fa-play-circle"></i> Final Version – Complete User Flow</h2>
     <p>From onboarding to mastering finances — the full journey in one seamless flow.</p>
-    <video autoplay loop muted playsinline controls style="width:100%; max-height:600px; margin: 30px auto; display:block; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0.2);">
+    <video autoplay loop muted playsinline controls style="width:100%; max-height:600px; margin: 30px auto; display:block; border-radius:12px;">
       <source src="assets/ur-splashscreen.mp4" type="video/mp4">
     </video>
   </div>

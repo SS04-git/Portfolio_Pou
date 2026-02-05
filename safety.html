@@ -160,7 +160,6 @@ body {
   width: 100%; /* fit container */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* subtle glow */
 }
 
 /* Prevent links in code-resources section from changing color or showing underline */
@@ -226,12 +225,6 @@ body.light-mode .project-section i {
   color: rgba(0,0,0,0.8) !important;
 }
 
-/* Video / Image shadows */
-body.light-mode .design-media video,
-body.light-mode .project-splash video {
-  box-shadow: 0 0 20px rgba(0,0,0,1) !important;
-}
-
 /* Footer Text */
 body.light-mode footer,
 body.light-mode footer a,
@@ -243,23 +236,6 @@ body.light-mode footer strong {
 body.light-mode .project-section a {
   color: #111 !important;
   text-decoration: underline !important;
-}
-/* GLOBAL fallback — only applies if shadow is NOT already set */
-img:not([style*="box-shadow"]),
-video:not([style*="box-shadow"]) {
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-/* Light mode fallback */
-body.light-mode img:not([style*="box-shadow"]),
-body.light-mode video:not([style*="box-shadow"]) {
-  box-shadow: 0 0 20px rgba(0,0,0,1);
-}
-/* Disable glow for this specific image */
-.highlight-image {
-  box-shadow: none !important;
 }
 
 /* ================================
@@ -803,74 +779,114 @@ body.light-mode video:not([style*="box-shadow"]) {
   </header>
 
   <main class="container">
-    <section class="project-page">
+  <section class="project-page">
 
-      <!-- Project Intro -->
-      <div class="project-intro-row">
-        <div class="project-intro">
-          <h1 class="project-title">Safety Net</h1>
-          <div class="project-subtitle">Real-Time Alerts for Safer Roads – AI-powered accident prevention using V2V</div>
-          <div class="project-meta">A project by Sara Saju</div>
+    <!-- Project Intro -->
+    <div class="project-intro-row">
+      <div class="project-intro">
+        <h1 class="project-title">Safety Net</h1>
+        <div class="project-subtitle">
+          Real-Time Alerts for Safer Roads — AI-powered accident prevention using V2V
+        </div>
+        <div class="project-meta">
+          A project by Sara Saju, Tanya Justin, Anusha Nair & Sneha Jacob
         </div>
       </div>
+    </div>
 
-      <!-- Hero image – perfectly centered -->
-      <div class="project-section" style="display:flex; justify-content:center; align-items:center; margin-bottom:80px; padding:40px 0;">
-        <img src="images/safety-net-hero.png" 
-             alt="Safety Net System Overview" 
-             style="max-width:960px; width:100%; height:auto; border-radius:8px;">
-      </div>
+    <!-- Hero Image -->
+    <div class="project-section" style="display:flex; justify-content:center; padding:40px 0;">
+      <img 
+        src="images/safety-net-hero.png" 
+        alt="Safety Net System Overview"
+        style="max-width:960px; width:100%; height:auto; border-radius:8px;">
+    </div>
 
-      <!-- Overview -->
-      <div class="project-section">
-        <p>Safety Net is an in-built vehicle safety feature that uses AI, deep learning, and Vehicle-to-Vehicle (V2V) communication to predict and prevent accidents in real time — especially on high-risk roads like Bengaluru’s KIA Airport corridor.</p>
-      </div>
+    <!-- Overview (no title) -->
+    <div class="project-section">
+      <p>
+        Safety Net is a concept exploration of an AI-powered, in-vehicle safety system that predicts and prevents road accidents in real time using deep learning and vehicle-to-vehicle (V2V) communication. The project focuses on high-risk urban highways such as Bengaluru’s KIA Airport Road, where overspeeding, poor visibility, and dense traffic significantly increase accident probability.
+      </p>
+    </div>
 
-      <!-- The Problem -->
-      <div class="project-section">
-        <h2 class="active">The Problem</h2>
-        <ul>
-          <li>India accounts for 9.5% of the world’s 1.2 million annual road deaths</li>
-          <li>Bengaluru 2023: 899 fatalities → one death every 4 days</li>
-          <li>KIA road remains one of India’s deadliest stretches</li>
-          <li>Overspeeding causes 35% of fatal accidents</li>
-          <li>Rain + waterlogging dramatically increases crash risk</li>
-        </ul>
-      </div>
+    <!-- Problem Statement -->
+    <div class="project-section">
+  <h2 class="active">Problem Statement</h2>
+  <p>
+    India experiences one of the highest road fatality rates globally, with urban highways being especially dangerous due to high vehicle density, inconsistent enforcement, and challenging environmental conditions. 
+    Bengaluru’s KIA Airport Road is a particularly high-risk corridor, recording frequent accidents caused by overspeeding, sudden braking, and limited visibility. 
+    Current road safety systems—including speed cameras, signage, and in-vehicle assistance—are largely reactive, alerting drivers only after a dangerous situation arises. 
+    There is a critical need for a predictive, real-time warning system that anticipates risks before accidents occur, enabling proactive decision-making for drivers.
+  </p>
+</div>
 
-      <!-- Solution & Features -->
-      <div class="project-section">
-        <h2 class="active">Solution & Key Features</h2>
-        <ul>
-          <li>Real-time analysis of weather, historical accidents, flight schedules & traffic density</li>
-          <li>Continuous driver behaviour monitoring (speed, braking, steering, G-forces)</li>
-          <li>Deep learning predicts accident-prone zones within 50 m</li>
-          <li>V2V broadcasts overspeeding or sudden braking to nearby vehicles</li>
-          <li>Clear voice + HUD alerts: “Caution: Accident-Prone Area Ahead” | “Alert: Nearby vehicle overspeeding”</li>
-        </ul>
-      </div>
+    </div>
 
-      <!-- Risk Identification & Driver Alerts – title left, image centered -->
-      <div class="project-section">
-        <h2 class="active" style="text-align:left; margin-bottom:32px;">
-          Risk Identification & Driver Alerts
-        </h2>
-        
-        <div style="display:flex; justify-content:center;">
-          <img src="images/safety-flow-simple.png" 
-               alt="Risk Identification and Alert Flow" 
-               style="max-width:840px; width:100%; height:auto; border-radius:8px;">
-        </div>
-      </div>
+    <!-- Main Tools -->
+    <div class="project-section">
+      <h2 class="active">Main Tools</h2>
+      <ul>
+        <li>AI and deep learning models for accident risk prediction</li>
+        <li>Vehicle-to-Vehicle (V2V) communication protocols</li>
+        <li>Real-time vehicle telemetry (speed, braking, steering, G-forces)</li>
+        <li>Environmental and contextual data (weather, visibility, traffic density)</li>
+        <li>Heads-Up Display (HUD) and voice-based alert systems</li>
+      </ul>
+    </div>
 
-      <!-- Impact -->
-      <div class="project-section">
-        <h2 class="active">Impact</h2>
-        <p>A proactive safety net that turns every equipped car into part of a shared early-warning system — with the potential to save hundreds of lives per year on just one dangerous road.</p>
-      </div>
 
-    </section>
-  </main>
+    <!-- Research -->
+<div class="project-section">
+
+  <h2 class="active">Research</h2>
+
+  <p>
+    Secondary research using Bengaluru Traffic Police (2023) data identified severe crash concentrations along the Airport Road corridor, with Yelahanka Air Force 
+    Station (63 fatalities), Devanahalli Airport (58), and Chikkajala (39) emerging as the top three high-risk zones. Motorcyclists dominate fatality statistics at 
+    59%, with 43% of deaths occurring between 6 PM–2 AM. Critical risk factors include overspeeding (37% on expressways), poor helmet compliance (34%), and hit-and-run 
+    incidents (30% of fatalities). These patterns reveal the need for predictive, location-specific interventions targeting high-speed segments and vulnerable road users 
+    rather than post-incident enforcement.
+  </p>
+
+  <!-- 3 MAPS HORIZONTAL -->
+  <div style="display:flex; gap:30px; margin-top:40px; flex-wrap:wrap;">
+
+    <img 
+      src="images/map-01.png"
+      alt="Crash Density – North Division"
+      class="click-expand-img"
+      style="flex:1; min-width:300px;"
+    >
+
+    <img 
+      src="images/map-02.png"
+      alt="Temporal Risk – Night Fatalities"
+      class="click-expand-img"
+      style="flex:1; min-width:300px;"
+    >
+
+    <img 
+      src="images/map-03.png"
+      alt="Speeding & Behaviour Risk Overlay"
+      class="click-expand-img"
+      style="flex:1; min-width:300px;"
+    >
+
+  </div>
+
+</div>
+
+
+    <!-- Solution -->
+    <div class="project-section">
+      <h2 class="active">Solution</h2>
+      <p>
+        Safety Net proposes a predictive safety system in which vehicles continuously analyze driving behavior, environmental conditions, and historical accident data to identify risk-prone zones in advance. When a potential threat is detected, the system alerts the driver through minimal, non-intrusive HUD and audio cues. Simultaneously, nearby vehicles receive warnings via V2V communication, forming a shared early-warning network that enables proactive slowing and safer decision-making before accidents occur.
+      </p>
+    </div>
+
+  </section>
+</main>
 
   <!-- Footer -->
   <footer>

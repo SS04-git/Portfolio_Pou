@@ -160,7 +160,6 @@ body {
   width: 100%; /* fit container */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* subtle glow */
 }
 
 .project-meta a {
@@ -179,7 +178,6 @@ body {
   width: auto;
   cursor: pointer;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 
@@ -253,12 +251,6 @@ body.light-mode .project-section i {
   color: rgba(0,0,0,0.8) !important;
 }
 
-/* Video / Image shadows */
-body.light-mode .design-media video,
-body.light-mode .project-splash video {
-  box-shadow: 0 0 20px rgba(0,0,0,1) !important;
-}
-
 /* Footer Text */
 body.light-mode footer,
 body.light-mode footer a,
@@ -270,20 +262,6 @@ body.light-mode footer strong {
 body.light-mode .project-section a {
   color: #111 !important;
   text-decoration: underline !important;
-}
-
-/* GLOBAL fallback — only applies if shadow is NOT already set */
-img:not([style*="box-shadow"]),
-video:not([style*="box-shadow"]) {
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-/* Light mode fallback */
-body.light-mode img:not([style*="box-shadow"]),
-body.light-mode video:not([style*="box-shadow"]) {
-  box-shadow: 0 0 20px rgba(0,0,0,1);
 }
 
 /* ================================
@@ -945,7 +923,7 @@ body.light-mode video:not([style*="box-shadow"]) {
       <!-- Video Column -->
        <div class="project-splash" style="flex-basis:45%; margin-top: 20px; display:flex; justify-content:center;">
   <video autoplay loop muted playsinline
-         style="width:auto; max-width:300px; max-height:480px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+         style="width:auto; max-width:300px; max-height:480px; border-radius:30px; object-fit:contain;">
     <source src="assets/sv-splashscreen.mp4" type="video/mp4">
   </video>
 </div>
@@ -1005,7 +983,7 @@ body.light-mode video:not([style*="box-shadow"]) {
   <div class="design-content">
     <h3>Live Interviews</h3>
     <p>
-      Ten participants aged 20– shared insights on their cooking habits, food waste behaviour, and donation
+      Ten participants aged 20–60 shared insights on their cooking habits, food waste behaviour, and donation
       awareness. Common issues included difficulty tracking expiry dates, cooking in excess quantities, and
       limited knowledge of local donation options. Most participants expressed willingness to share surplus
       food if the process were easier and more accessible.
@@ -1036,7 +1014,7 @@ body.light-mode video:not([style*="box-shadow"]) {
   </div>
 
   <div class="design-media">
-    <div class="carousel" style="position:relative; width:100%; overflow:hidden; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0.1);">
+    <div class="carousel" style="position:relative; width:100%; overflow:hidden; border-radius:12px;">
       
       <div class="carousel-inner" style="display:flex; transition:transform 0.5s ease;">
 <img src="images/survey-analysis1.png" alt="Survey Analysis Chart 1" style="width:100%; flex-shrink:0; object-fit:contain;">
@@ -1105,7 +1083,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <img src="images/sv-context-map.png" alt="System map of food waste ecosystem in India"
-      style="width:auto; max-width:450px; max-height:450px; margin-left:100px; box-shadow:0 0 20px rgba(255,255,255,0.15); object-fit:contain;">
+      style="width:auto; max-width:450px; max-height:450px; margin-left:100px; object-fit:contain;">
     </div>
   </div>
 
@@ -1162,7 +1140,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
 
   <!-- Carousel Column -->
   <div style="flex-basis:45%; min-width:300px; margin-top:0px; margin-bottom:0px; display:flex; align-items:center; justify-content:top;">
-    <div class="carousel" style="position:relative; width:100%; overflow:hidden; border-radius:12px; box-shadow:0 0 30px rgba(255,255,255,0);">
+    <div class="carousel" style="position:relative; width:100%; overflow:hidden; border-radius:12px; ">
       
       <div class="carousel-inner" style="display:flex; transition:transform 0.5s ease;">
         <img src="images/paper1.png" alt="Low-Fidelity Prototype 1" style="width:100%; flex-shrink:0; object-fit:contain;">
@@ -1203,7 +1181,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
   <source src="assets/savour-splash-auth.mp4" type="video/mp4">
 </video>
     </div>
@@ -1221,7 +1199,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
         <source src="assets/savour-home-nav.mp4" type="video/mp4">
       </video>
     </div>
@@ -1241,7 +1219,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
         <source src="assets/savour-meals.mp4" type="video/mp4">
       </video>
     </div>
@@ -1259,7 +1237,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
         <source src="assets/savour-pantry.mp4" type="video/mp4">
       </video>
     </div>
@@ -1278,7 +1256,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
         <source src="assets/savour-sidebar.mp4" type="video/mp4">
       </video>
     </div>
@@ -1297,7 +1275,7 @@ and easy donation integration to promote mindful consumption and reduce waste.
     </div>
     <div class="design-media">
       <video autoplay loop muted playsinline controls
-       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; box-shadow:0 0 30px rgba(255,255,255,0.2); object-fit:contain;">
+       style="width:auto; max-width:300px; max-height:480px; margin-left: 150px; border-radius:30px; object-fit:contain;">
         <source src="assets/savour-profile-donation.mp4" type="video/mp4">
       </video>
     </div>

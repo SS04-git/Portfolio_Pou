@@ -160,7 +160,6 @@ body {
   width: 100%; /* fit container */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* subtle glow */
 }
 
 /* Prevent links in code-resources section from changing color or showing underline */
@@ -226,12 +225,6 @@ body.light-mode .project-section i {
   color: rgba(0,0,0,0.8) !important;
 }
 
-/* Video / Image shadows */
-body.light-mode .design-media video,
-body.light-mode .project-splash video {
-  box-shadow: 0 0 20px rgba(0,0,0,1) !important;
-}
-
 /* Footer Text */
 body.light-mode footer,
 body.light-mode footer a,
@@ -243,23 +236,6 @@ body.light-mode footer strong {
 body.light-mode .project-section a {
   color: #111 !important;
   text-decoration: underline !important;
-}
-/* GLOBAL fallback — only applies if shadow is NOT already set */
-img:not([style*="box-shadow"]),
-video:not([style*="box-shadow"]) {
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-/* Light mode fallback */
-body.light-mode img:not([style*="box-shadow"]),
-body.light-mode video:not([style*="box-shadow"]) {
-  box-shadow: 0 0 20px rgba(0,0,0,1);
-}
-/* Disable glow for this specific image */
-.highlight-image {
-  box-shadow: none !important;
 }
 
 /* ================================
